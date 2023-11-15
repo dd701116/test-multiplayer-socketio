@@ -1,0 +1,29 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <div id="main-menu">
+        <custom-header></custom-header>
+        <ul class="list-unstyled">
+            <li><a class="btn btn-secondary w-75" href="/help">How to create a party?</a></li>
+            <li><a class="btn btn-secondary w-75" href="/help">How to join a party?</a></li>
+            <li><a class="btn btn-secondary w-75" href="/help">How to move your character?</a></li>
+        </ul>
+    </div>
+
+    <style>
+        #main-menu {
+            width: 80%;
+            height: 80%;
+            margin: 5% 10%;
+            background-color: wheat;
+            border-radius: 2%;
+        }
+
+        #main-menu li{
+            margin: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+{% endblock %}
+

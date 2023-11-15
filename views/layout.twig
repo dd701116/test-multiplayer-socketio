@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body class="text-center">
+    <div class="screen">
+      {% block body %}{% endblock %}
+    </div>
+    {% if title == 'Game' %}
+    <div style="z-index: 1000;
+                position: absolute;
+                margin: auto;
+                width: 900px;">
+      <a class="btn btn-danger" href="/">Leave</a>
+    </div>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+
+      function newGame() {
+
+      }
+
+      function joinGame(gameId) {
+
+      }
+
+      function leaveGame() {
+
+      }
+
+      function getMyId() {
+        return socket.id
+      }
+    </script>
+    <script src="/javascripts/game/game.js"></script>
+    <script type="module" src="/javascripts/components/custom-header.js"></script>
+    <script type="module" src="/javascripts/components/game-board.js"></script>
+  </body>
+</html>
